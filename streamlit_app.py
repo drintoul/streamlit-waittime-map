@@ -8,4 +8,4 @@ st.write("""
 # Universal Orlando Waittimes
 """)
 
-st.map(df)
+st.map(df, size=8)

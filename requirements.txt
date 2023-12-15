@@ -1,1 +1,1 @@
-openpyxl
+python3-openpyxl

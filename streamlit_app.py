@@ -22,4 +22,4 @@ attraction = st.selectbox('Attraction', attractions)
 #chart_data = df[attraction]
 #st.line_chart(chart_data)
 
-st.write(df[attraction].describe())
+#st.write(df[attraction].describe())

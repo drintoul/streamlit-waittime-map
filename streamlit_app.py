@@ -23,7 +23,7 @@ with col2:
 
 col1, col2 = st.columns(2)
 with col1:
-  st.map(locations, size=8, color='color')
+  st.map(locations, size=8, color=locations['color'])
   locations['color'] = '(0,255,00)'
   locations.loc[f'{attraction}', 'color'] = '(255,0,0)'
 with col2:

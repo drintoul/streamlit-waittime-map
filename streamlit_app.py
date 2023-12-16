@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("""Universal Studios Orlando Waittimes""")
+st.title("""Universal Studios Wait Times""")
 
 st.subheader("""Averages from July 2021-2023
 Data from thrill-data.com""")

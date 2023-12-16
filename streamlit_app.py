@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 
-st.heading("""
+st.header("""
 # Universal Orlando Waittimes
 """)
 
-st.subheading("""Data from July 1st, 2023
+st.subheader("""Data from July 1st, 2023
 Purpose of this project was to get experience using interactive streamlit controls, specifically with map and time widgets
 """)
 

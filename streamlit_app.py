@@ -24,7 +24,7 @@ with col2:
 col1, col2 = st.columns(2)
 with col1:
   locations['color'] = '#000000'
-  locations.loc['attraction' == f'{attraction}']['color'] = '#FF0000'
+  locations.loc['attraction' == f'{attraction}', 'color'] = '#FF0000'
   st.dataframe(locations)
   #st.map(locations, size=8, color='color')
 with col2:

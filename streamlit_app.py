@@ -13,7 +13,7 @@ st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')
 
-attractions = list(locations.unique())
+attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
 st.write(df[attraction].describe())

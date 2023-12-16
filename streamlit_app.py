@@ -20,9 +20,6 @@ col2.dataframe(df[['time', attraction]], hide_index=True)
 st.map(locations, size=8)
 st.dataframe(locations[locations['attraction'] == attraction], hide_index=True)
 
-#chart_data = df[attraction]
-#st.line_chart(chart_data)
+chart_data = df[attraction]
+st.line_chart(chart_data)
 
-style = df.style.hide_index()
-style.hide_columns()
-st.write(style.to_html(), unsafe_allow_html=True)

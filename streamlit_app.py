@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_excel('locations.xlsx')
+locations = pd.read_excel('locations.xlsx')
 
 #st.write(df)
 
@@ -9,8 +9,11 @@ st.write("""
 # Universal Orlando Waittimes
 """)
 
-st.map(df, size=8)
+st.map(locations, size=8)
 
-attraction = st.selectbox('Attraction', df.unique())
+df = pd.read_csv('wait.csv')
+
+attractions = list(locations.unique())
+attraction = st.selectbox('Attraction', attractions)
 
 st.write(df[attraction].describe())

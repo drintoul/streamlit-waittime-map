@@ -12,13 +12,15 @@ locations = pd.read_excel('locations.xlsx')
 attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
-st.dataframe(locations[locations['attraction'] == attraction], hide_index=True)
+#st.dataframe(locations[locations['attraction'] == attraction], hide_index=True)
+
 #st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')
 
 st.write(df.head())
-#st.write(df[df['attraction'] == attraction])
+
+st.dataframe(df[['time', attraction]], hide_index=True)
 
 #chart_data = df[attraction]
 #st.line_chart(chart_data)

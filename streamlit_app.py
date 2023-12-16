@@ -17,7 +17,7 @@ chart_data = df[f'{attraction}']
 
 col1, col2 = st.columns(2)
 col1.dataframe(df[['time', f'{attraction}']], hide_index=True)
-col2.line_chart(chart_data)
+col2.line_chart(data = chart_data, x='time', y='wait')
 
 col1, col2 = st.columns(2)
 col1.map(locations, size=8)

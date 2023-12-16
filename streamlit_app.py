@@ -14,7 +14,7 @@ locations = pd.read_excel('locations.xlsx')
 st.write(locations)
 st.map(locations, size=8)
 
-df = pd.read_csv('wait.csv', index='time')
+df = pd.read_csv('wait.csv')
 
 attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)

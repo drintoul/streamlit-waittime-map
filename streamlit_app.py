@@ -22,10 +22,9 @@ with col1:
 with col2:
   st.line_chart(data = jul_data, x='time')
 
-st.dataframe(locations[['attraction', 'color']])
 locations[locations['attraction'] != f'attraction']['color'] = '#000000'
 locations[locations['attraction'] == f'attraction']['color'] = '#FF0000'
-st.dataframe(locations[['attraction', 'color']])
+
 col1, col2 = st.columns(2)
 with col1:
   st.map(locations, size=8, color='color')

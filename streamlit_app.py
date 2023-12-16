@@ -10,8 +10,8 @@ locations = pd.read_excel('locations.xlsx')
 attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
-#jan_data = pd.read_csv('wait_jan.csv').round(0)
-#jan_data = jul_data[['time', f'{attraction}']]
+jan_data = pd.read_csv('wait_jan.csv').round(0)
+jan_data = jul_data[['time', f'{attraction}']]
 
 jul_data = pd.read_csv('wait_jul.csv').round(0)
 jul_data = jul_data[['time', f'{attraction}']]
@@ -26,4 +26,4 @@ col1, col2 = st.columns(2)
 with col1:
   st.map(locations, size=8, color='#000000')
 with col2:
-  st.write(jul_data[f'{attraction}'].describe())
+  st.write(jan_data[f'{attraction}'].describe())

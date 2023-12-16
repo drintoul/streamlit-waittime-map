@@ -15,4 +15,7 @@ df = pd.read_csv('wait.csv')
 attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
+chart_data = df[attraction]
+st.line_chart(chart_data)
+
 st.write(df[attraction].describe())

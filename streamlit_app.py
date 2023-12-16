@@ -1,14 +1,13 @@
 import streamlit as st
 import pandas as pd
 
-locations = pd.read_excel('locations.xlsx')
-
-#st.write(df)
-
 st.write("""
 # Universal Orlando Waittimes
 """)
 
+locations = pd.read_excel('locations.xlsx')
+
+st.write(locations)
 st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')

@@ -3,8 +3,6 @@ import pandas as pd
 
 st.title("""Universal Studios Orlando Waittimes""")
 
-st.header("""Universal Studios Orlando Waittimes""")
-
 st.subheader("""Data from July 1st, 2023""")
 
 st.info('Purpose of this project was to get experience using interactive streamlit controls, specifically with map and time widgets', icon='ℹ️')

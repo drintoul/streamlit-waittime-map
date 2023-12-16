@@ -17,7 +17,8 @@ st.dataframe(locations[locations['attraction'] == attraction], hide_index=True)
 
 df = pd.read_csv('wait.csv')
 
-st.write(df[df['attraction'] == attraction])
+st.write(df.head())
+#st.write(df[df['attraction'] == attraction])
 
 #chart_data = df[attraction]
 #st.line_chart(chart_data)

@@ -27,7 +27,7 @@ with col1:
   locations['color'] = '#000000'
   locations.loc[locations['attraction'] == f'{attraction}']['color'] = '#FF0000'
   st.dataframe(locations[['attraction', 'color']])
-  #st.map(locations, size=8, color='color')
+  st.map(locations, size=8, color='color')
 with col2:
   st.write(df[f'{attraction}'].describe())
 

@@ -16,7 +16,7 @@ df = df.round(0)
 chart_data = df[attraction]
 
 col1, col2 = st.columns(2)
-col1.dataframe(df[['time', attraction.replace("'","")]], hide_index=True)
+col1.dataframe(df[['time', attraction]], hide_index=True)
 col2.line_chart(chart_data)
 
 st.map(locations, size=8)

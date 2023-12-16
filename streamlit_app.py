@@ -24,6 +24,6 @@ with col2:
 
 col1, col2 = st.columns(2)
 with col1:
-  st.map(locations, size=8, color='#000000')
+  st.map(locations, size=8, color='color')
 with col2:
   st.write(jul_data[f'{attraction}'].describe())

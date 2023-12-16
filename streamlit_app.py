@@ -18,8 +18,6 @@ attraction = st.selectbox('Attraction', attractions)
 
 df = pd.read_csv('wait.csv')
 
-st.write(df.head())
-
 st.dataframe(df[['time', attraction]], hide_index=True)
 
 #chart_data = df[attraction]

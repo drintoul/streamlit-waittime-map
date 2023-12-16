@@ -22,4 +22,4 @@ col2.line_chart(chart_data)
 st.map(locations, size=8)
 st.dataframe(locations[locations['attraction'] == attraction], hide_index=True)
 
-st.write(df[attraction].describe())
+st.write(df[attraction].describe().T)

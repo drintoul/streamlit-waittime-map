@@ -11,13 +11,13 @@ st.info('Purpose of this project was to get experience using interactive streaml
 
 locations = pd.read_excel('locations.xlsx')
 
-st.write(locations)
+attractions = list(locations['attraction'].unique())
+attraction = st.selectbox('Attraction', attractions)
+
+st.write(locations[locations['attraction'] == attraction])
 st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')
-
-attractions = list(locations['attraction'].unique())
-attraction = st.selectbox('Attraction', attractions)
 
 #chart_data = df[attraction]
 #st.line_chart(chart_data)

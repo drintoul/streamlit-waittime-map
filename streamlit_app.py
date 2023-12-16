@@ -22,7 +22,8 @@ with col1:
 with col2:
   st.line_chart(data = jul_data, x='time')
 
-locations[locations['attraction'] == f'attraction']['color'] = '#00FF00'
+locations['color'] = '#000000'
+locations[locations['attraction'] == f'attraction']['color'] = '#FF0000'
 
 col1, col2 = st.columns(2)
 with col1:

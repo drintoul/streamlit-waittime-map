@@ -30,3 +30,5 @@ with col1:
   st.map(locations, size=8, color='color')
 with col2:
   st.write(jul_data[f'{attraction}'].describe())
+
+st.info('Interactivity with map and timetable still to come!', icon='ℹ️')

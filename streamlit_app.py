@@ -14,7 +14,7 @@ locations = pd.read_excel('locations.xlsx')
 attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
-st.write(locations[locations['attraction'] == attraction])
+st.write(locations[locations['attraction'] == attraction], hide_index=True)
 st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')

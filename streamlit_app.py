@@ -24,6 +24,7 @@ with col2:
 col1, col2 = st.columns(2)
 with col1:
   st.map(locations, size=8, color='color')
+  locations['color'] = 'black'
   locations.loc[f'{attraction}', 'color'] = 'red'
 with col2:
   st.write(df[f'{attraction}'].describe())

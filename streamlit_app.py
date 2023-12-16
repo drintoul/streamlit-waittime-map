@@ -11,16 +11,16 @@ attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
 jan_data = pd.read_csv('wait_jan.csv').round(0)
-jan_data = jul_data[['time', f'{attraction}']]
+jan_data = jan_data[['time', f'{attraction}']]
 
 jul_data = pd.read_csv('wait_jul.csv').round(0)
 jul_data = jul_data[['time', f'{attraction}']]
 
 col1, col2 = st.columns(2)
 with col1:
-  st.dataframe(jul_data[['time', f'{attraction}']], hide_index=True)
+  st.dataframe(jan_data[['time', f'{attraction}']], hide_index=True)
 with col2:
-  st.line_chart(data = jul_data, x='time')
+  st.line_chart(data = jan_data, x='time')
 
 col1, col2 = st.columns(2)
 with col1:

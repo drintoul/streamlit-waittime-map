@@ -13,13 +13,13 @@ attraction = st.selectbox('Attraction', attractions)
 df = pd.read_csv('wait.csv')
 df = df.round(0)
 
-chart_data = df[['time', f'{attraction}']]
+jul_data = df[['time', f'{attraction}']]
 
 col1, col2 = st.columns(2)
 with col1:
   st.dataframe(df[['time', f'{attraction}']], hide_index=True)
 with col2:
-  st.line_chart(data = chart_data, x='time')
+  st.line_chart(data = jul_data, x='time')
 
 col1, col2 = st.columns(2)
 with col1:

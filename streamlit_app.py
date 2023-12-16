@@ -10,3 +10,5 @@ st.write("""
 """)
 
 st.map(df, size=8)
+
+st.select('Choose attraction', df.unique())

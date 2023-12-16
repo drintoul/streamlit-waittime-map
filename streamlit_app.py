@@ -15,7 +15,7 @@ attraction = st.selectbox('Attraction', attractions)
 #st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')
-df['time'] = df['time'].round(0)
+df = df.round(0)
 
 st.dataframe(df[['time', attraction]], hide_index=True)
 

@@ -13,9 +13,11 @@ attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
 st.dataframe(locations[locations['attraction'] == attraction], hide_index=True)
-st.map(locations, size=8)
+#st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')
+
+st.write(df[df['attraction'] == attraction])
 
 #chart_data = df[attraction]
 #st.line_chart(chart_data)

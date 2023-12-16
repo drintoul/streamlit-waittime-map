@@ -11,4 +11,6 @@ st.write("""
 
 st.map(df, size=8)
 
-st.select('Choose attraction', df.unique())
+attraction = st.sidebar.selectbox('Attraction', df.unique())
+
+st.write(df[attraction].describe())

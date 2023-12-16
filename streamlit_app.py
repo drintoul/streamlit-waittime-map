@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.header("""
-Universal Orlando Waittimes
+Universal Studios Orlando Waittimes
 """)
 
 st.subheader("""Data from July 1st, 2023""")

@@ -13,13 +13,13 @@ attraction = st.selectbox('Attraction', attractions)
 df = pd.read_csv('wait.csv')
 df = df.round(0)
 
-chart_data = df[attraction]
+chart_data = df[f'{attraction}']
 
 col1, col2 = st.columns(2)
-col1.dataframe(df[['time', attraction]], hide_index=True)
+col1.dataframe(df[['time', f'{attraction}']], hide_index=True)
 col2.line_chart(chart_data)
 
 st.map(locations, size=8)
-st.dataframe(locations[locations['attraction'] == attraction], hide_index=True)
+st.dataframe(locations[locations['attraction'] == f'{attraction}'], hide_index=True)
 
-st.write(df[attraction].describe().T)
+st.write(df[f'{attraction}'].describe().T)

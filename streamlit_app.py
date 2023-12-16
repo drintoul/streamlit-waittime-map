@@ -7,7 +7,7 @@ st.write("""
 
 locations = pd.read_excel('locations.xlsx')
 
-st.write(locations)
+#st.write(locations)
 st.map(locations, size=8)
 
 df = pd.read_csv('wait.csv')

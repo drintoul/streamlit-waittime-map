@@ -10,10 +10,10 @@ locations = pd.read_excel('locations.xlsx')
 attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
-df = pd.read_csv('wait.csv')
+df = pd.read_csv('wait.csv', sort=None)
 df = df.round(0)
 
-chart_data = df[['time', f'{attraction}'], sort=None]
+chart_data = df[['time', f'{attraction}']]
 
 col1, col2 = st.columns(2)
 col1.dataframe(df[['time', f'{attraction}']], hide_index=True)

@@ -10,9 +10,9 @@ locations = pd.read_excel('locations.xlsx')
 attractions = list(locations['attraction'].unique())
 attraction = st.selectbox('Attraction', attractions)
 
-df = pd.read_csv('wait_jan.csv')
-jan_data = df.round(0)
-jan_data = jul_data[['time', f'{attraction}']]
+#df = pd.read_csv('wait_jan.csv')
+#jan_data = df.round(0)
+#jan_data = jul_data[['time', f'{attraction}']]
 
 df = pd.read_csv('wait_jul.csv')
 jul_data = df.round(0)

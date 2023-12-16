@@ -7,7 +7,7 @@ Universal Orlando Waittimes
 
 st.subheader("""Data from July 1st, 2023""")
 
-Purpose of this project was to get experience using interactive streamlit controls, specifically with map and time widgets
+st.info('Purpose of this project was to get experience using interactive streamlit controls, specifically with map and time widgets', icon='ℹ️')
 
 locations = pd.read_excel('locations.xlsx')
 

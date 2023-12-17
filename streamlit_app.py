@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(page_title="Universal Studios Wait Times")
 st.title("""Universal Studios Wait Times""")
 
 st.info('Averages for July past 3 years (2021-2023). Data from thrill-data.com', icon='ℹ️')
